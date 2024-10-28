@@ -1,0 +1,158 @@
+body{
+    background-color:rgb(18, 18, 49) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 32px;
+}
+.container{
+    background-color: white;
+    max-width: 1000px;
+    border-radius: 30px;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tabs{
+    display: flex;
+    justify-content:space-around;
+    text-transform: uppercase;
+    color:rgb(18, 18, 49) ;
+    font-weight: bold;
+    width:100% ;
+}
+.tabs .active{
+    color: #608BC1;
+    position: relative;
+}
+.tabs p:hover{
+    color: #608BC1;
+    cursor: pointer;
+}
+.tabs .active::before{
+    content:'';
+    background-color:rgb(18, 18, 49) ;
+    width: 150%;
+    height: 4px;
+    position: absolute;
+    bottom: -7px;
+    left: -25%;
+    border-radius: 10px;
+}
+.line{
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color:rgb(18, 18, 49);
+    top: 120px;
+    max-width: 1000px;
+    border-radius: 10px;
+}
+.customer{
+    background-color: #608BC1;
+    width: 50%;
+    padding: 16px;
+    text-align: center;
+    margin: 32px 0px 16px 0px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-transform: uppercase;
+}
+.customer .number{
+    font-size: 54px;
+    margin: 0;
+}
+.customer .title{
+    font-size: 12px;
+    font-weight: bold;
+    margin: 16px 0 0 0;
+}
+.cardContainer{
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+}
+.card{
+    padding: 16px 32px;
+    border-radius: 16px 32px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 30%;
+    text-align: center;
+    margin: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.2s tranform ease;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+.card .title{
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 8px;
+}
+.card .title p{
+    margin:4px 0px;
+}
+.card .title .price{
+    font-size: 42px;
+}
+.card hr{
+    width: 30%;
+    border: 1px solid rgb(18, 18, 49);
+    border-radius: 2px;
+}
+.card button{
+    background-color:  rgb(18, 18, 49);
+    border: none;
+    padding: 16px;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 8px 0px;
+    transition: 0.2s transform ease;
+}
+
+.card button:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.professional{
+    background-color: rgb(18, 18, 49);
+    color: white;
+    position: absolute;
+    top :-19px;
+    width: 100%;
+    left: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+@media screen and (max-width:1024px){
+    .tabs{
+        flex-direction: column;
+        align-items: center;
+    }
+    .line{
+        display: none;
+    }
+    .customers{
+        width: 100%;
+    }
+    .cardContainer{
+        flex-direction: column;
+        width: 100%;
+    }
+    .card{
+        margin: 30px 0;
+        padding: 0;
+        width: 100%;
+    }
+    .card button{
+        margin: 15px;
+    }
+}
